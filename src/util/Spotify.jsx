@@ -8,7 +8,7 @@ const addTracksEndpoints = "https://api.spotify.com/v1/playlists";
 
 const Spotify = {
   connectToSpotify() {
-    let uri = `http://${window.location.host}${redirectUri}`;
+    let uri = `${window.location.protocol}//${window.location.host}${redirectUri}`;
     let url = `${authorizeEndpoint}?client_id=${clientId}&response_type=token&redirect_uri=${uri}&scope=playlist-modify-public`;
     window.location = url;
   },
