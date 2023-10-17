@@ -3,15 +3,15 @@ import React from "react";
 function SearchBar(props) {
   return (
     
-    <form onSubmit={props.onSubmit} className="grid grid-cols-4 h-fit place-self-center gap-2 bg-slate-500">
-        <div className="col-span-4">
-          <label htmlFor="search">Search a song on spotify</label>
+    <form onSubmit={props.onSubmit} className="flex flex-col items-center sm:grid sm:grid-cols-4 sm:place-self-center gap-2">
+        <div className="sm:col-span-4 text-center">
+          <label htmlFor="search" className="text-base sm:text-lg">Search for a song, an artist... on spotify</label>
         </div>
-        <div className="col-span-3 bg-green-400">
-          <input type="text" id="search" onChange={props.onChange} className="w-full rounded h-8 "></input>
+        <div className="sm:col-span-3 bg-green-400">
+          <input type="text" id="search" onChange={props.onChange} className="w-full rounded h-8"></input>
         </div>
-        <div className="place-self-end">
-        <button type="submit" className="bg-red-500 h-8 px-7 text-sm rounded hover:bg-sky-300 active:bg-violet-400">Search</button>
+        <div className="sm:place-self-end">
+        <button type="submit" className="bg-orange h-8 px-7 text-base sm:text-lg rounded hover:bg-sky-300 active:bg-violet-400">Search</button>
         </div>
     </form>
   );

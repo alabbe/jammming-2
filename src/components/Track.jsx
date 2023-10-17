@@ -10,9 +10,9 @@ function Track(props) {
   }
 
   return (
-    <div className="grid grids-col-1 grids-row-2 bg-sky-200 my-2 rounded text-sm p-1">
+    <div className="grid grids-col-1 grids-row-2 my-2 text-sm sm:text-base p-1 bg-pink">
       <div className="place-self-end">
-        <button onClick={props.onClick} value={props.track.id} className="bg-red-100 h-6 px-3 text-xs rounded hover:bg-sky-300 active:bg-violet-400">
+        <button onClick={props.onClick} value={props.track.id} className="bg-yellow h-6 px-3 text-xs rounded hover:bg-sky-300 active:bg-violet-400">
           {button}
         </button>
 

@@ -12,7 +12,7 @@ function SearchResults(props) {
 
     return (
         <>
-            <div className="h-20 m-1">
+            <div className="sm:h-28 m-1">
                 <h2>Search results</h2>
                 <p className="italic text-xs opacity-40">Search a song by keyword, then add it to your custom playlist and enjoy on Spotify!</p>
             </div>
