@@ -1,5 +1,5 @@
 const clientId = "7ab319f2b04c4882ade7c4a4ef56322b";
-const redirectUri = "http://localhost:5173/callback";
+const redirectUri = "/callback";
 const authorizeEndpoint = "https://accounts.spotify.com/authorize";
 const searchEndpoint = "https://api.spotify.com/v1/search";
 const getProfileEndpoint = "https://api.spotify.com/v1/me";
@@ -8,7 +8,8 @@ const addTracksEndpoints = "https://api.spotify.com/v1/playlists";
 
 const Spotify = {
   connectToSpotify() {
-    let url = `${authorizeEndpoint}?client_id=${clientId}&response_type=token&redirect_uri=${redirectUri}&scope=playlist-modify-public`;
+    let uri = `http://${window.location.host}${redirectUri}`;
+    let url = `${authorizeEndpoint}?client_id=${clientId}&response_type=token&redirect_uri=${uri}&scope=playlist-modify-public`;
     window.location = url;
   },
 
