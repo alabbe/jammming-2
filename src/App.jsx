@@ -136,36 +136,36 @@ function App() {
 
   return (
     <div className="h-screen">
-        <div id="header" className="grid sm:grid-cols-12 grid-cols-6 py-6 bg-pink items-center">
-          <div className="sm:col-span-3 col-span-1"></div>
-          <div className="sm:col-span-6 col-span-4 sm:text-3xl text-xl font-bold text-center">
-            <h1 className="sm:text-navy text-white">Jammming</h1>
-          </div>
-          <div className="sm:col-span-3 col-span-1">
+      <div id="header" className="grid sm:grid-cols-12 grid-cols-6 py-6 bg-pink items-center">
+        <div className="sm:col-span-2 col-span-1"></div>
+        <div className="sm:col-span-8 col-span-4 sm:text-3xl text-xl font-bold text-center">
+          <h1 className="sm:text-navy text-white">Jammming</h1>
+        </div>
+        <div className="sm:col-span-2 col-span-1">
           <Login
             isExpired={expirationTime}
             isAuthorized={spotifyAccessToken}
             onClick={handleAuthorizeSpotify}
           />
-          </div>
+        </div>
       </div>
       <div id="hero" className="h-60 bg-yellow grid sm:grid-cols-12 grid-cols-6 place-content-center">
         <div className="col-span-1 sm:col-span-2"></div>
         <div className="col-span-4 sm:col-span-8">
           <SearchBar onSubmit={handleOnSubmitSearch} />
-          </div>
+        </div>
         <div className="col-span-1 sm:col-span-2"></div>
       </div>
-        <div className="grid grid-cols-4 sm:grid-cols-12 sm:h-full bg-pink-300 gap-3 py-8 px-2">
-          <div className="col-span-1 sm:col-span-2"></div>
-          <div className="col-span-4 sm:col-span-4">
-            <SearchResults
-              results={results}
-              onAdd={handleOnClickAdd}
-              origin="tracklist"
-            />
-          </div>
-          <div className="col-span-4 sm:col-span-4">
+      <div id="results" className="grid grid-cols-4 sm:grid-cols-12 sm:h-full gap-3 py-8 px-2">
+        <div className="col-span-1 sm:col-span-2"></div>
+        <div className="col-span-4 sm:col-span-4 bg-white">
+          <SearchResults
+            results={results}
+            onAdd={handleOnClickAdd}
+            origin="tracklist"
+          />
+        </div>
+        <div className="col-span-4 sm:col-span-4 bg-white">
           <Playlist
             playlist={playlist}
             onRemove={handleOnClickRemove}
@@ -174,10 +174,10 @@ function App() {
             origin="playlist"
             name={playListName}
           />
-          </div>
-          <div className="col-span-1 sm:col-span-2"></div>
         </div>
+        <div className="col-span-1 sm:col-span-2"></div>
       </div>
+    </div>
   );
 }
 
